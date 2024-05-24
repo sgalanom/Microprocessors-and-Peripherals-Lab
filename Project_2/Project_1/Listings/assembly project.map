@@ -1,0 +1,909 @@
+Component: Arm Compiler for Embedded 6.21 Tool: armlink [5ec1fa00]
+
+==============================================================================
+
+Section Cross References
+
+    compute_single_digit.o(.ARM.exidx) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    compute_single_digit.o(.ARM.exidx) refers to compute_single_digit.o(.text) for [Anonymous Symbol]
+    compute_hash.o(.text) refers to test.o(.rodata.table) for table
+    compute_hash.o(.ARM.exidx) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    compute_hash.o(.ARM.exidx) refers to compute_hash.o(.text) for [Anonymous Symbol]
+    sum_of_natural_numbers.o(.ARM.exidx) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    sum_of_natural_numbers.o(.ARM.exidx) refers to sum_of_natural_numbers.o(.text) for [Anonymous Symbol]
+    test.o(.text.main) refers to test.o(.rodata.str1.1) for .L.str
+    test.o(.text.main) refers to printf.o(.text) for printf
+    test.o(.text.main) refers to compute_hash.o(.text) for compute_hash
+    test.o(.text.main) refers to compute_single_digit.o(.text) for compute_single_digit
+    test.o(.text.main) refers to sum_of_natural_numbers.o(.text) for sum_of_natural_numbers
+    test.o(.ARM.exidx.text.main) refers to test.o(.text.main) for [Anonymous Symbol]
+    retarget_io.o(.ARM.exidx.text.ITM_SendChar) refers to retarget_io.o(.text.ITM_SendChar) for [Anonymous Symbol]
+    retarget_io.o(.text.ITM_ReceiveChar) refers to retarget_io.o(.data.ITM_RxBuffer) for ITM_RxBuffer
+    retarget_io.o(.ARM.exidx.text.ITM_ReceiveChar) refers to retarget_io.o(.text.ITM_ReceiveChar) for [Anonymous Symbol]
+    retarget_io.o(.text._sys_open) refers to retarget_io.o(.rodata.str1.1) for .L.str
+    retarget_io.o(.text._sys_open) refers to strcmpv7em.o(.text) for strcmp
+    retarget_io.o(.ARM.exidx.text._sys_open) refers to retarget_io.o(.text._sys_open) for [Anonymous Symbol]
+    retarget_io.o(.ARM.exidx.text._sys_close) refers to retarget_io.o(.text._sys_close) for [Anonymous Symbol]
+    retarget_io.o(.text._sys_write) refers to retarget_io.o(.text.stdout_putchar) for stdout_putchar
+    retarget_io.o(.text._sys_write) refers to retarget_io.o(.text.stderr_putchar) for stderr_putchar
+    retarget_io.o(.ARM.exidx.text._sys_write) refers to retarget_io.o(.text._sys_write) for [Anonymous Symbol]
+    retarget_io.o(.text.stdout_putchar) refers to retarget_io.o(.text.ITM_SendChar) for ITM_SendChar
+    retarget_io.o(.ARM.exidx.text.stdout_putchar) refers to retarget_io.o(.text.stdout_putchar) for [Anonymous Symbol]
+    retarget_io.o(.text.stderr_putchar) refers to retarget_io.o(.text.ITM_SendChar) for ITM_SendChar
+    retarget_io.o(.ARM.exidx.text.stderr_putchar) refers to retarget_io.o(.text.stderr_putchar) for [Anonymous Symbol]
+    retarget_io.o(.text._sys_read) refers to retarget_io.o(.text.stdin_getchar) for stdin_getchar
+    retarget_io.o(.ARM.exidx.text._sys_read) refers to retarget_io.o(.text._sys_read) for [Anonymous Symbol]
+    retarget_io.o(.text.stdin_getchar) refers to retarget_io.o(.text.ITM_ReceiveChar) for ITM_ReceiveChar
+    retarget_io.o(.ARM.exidx.text.stdin_getchar) refers to retarget_io.o(.text.stdin_getchar) for [Anonymous Symbol]
+    retarget_io.o(.ARM.exidx.text._sys_istty) refers to retarget_io.o(.text._sys_istty) for [Anonymous Symbol]
+    retarget_io.o(.ARM.exidx.text._sys_seek) refers to retarget_io.o(.text._sys_seek) for [Anonymous Symbol]
+    retarget_io.o(.ARM.exidx.text._sys_flen) refers to retarget_io.o(.text._sys_flen) for [Anonymous Symbol]
+    startup_stm32f411xe.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f411xe.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f411xe.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f411xe.o(RESET) refers to startup_stm32f411xe.o(STACK) for __initial_sp
+    startup_stm32f411xe.o(RESET) refers to startup_stm32f411xe.o(.text) for Reset_Handler
+    startup_stm32f411xe.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f411xe.o(.text) refers to system_stm32f4xx.o(.text.SystemInit) for SystemInit
+    startup_stm32f411xe.o(.text) refers to __main.o(!!!main) for __main
+    startup_stm32f411xe.o(.text) refers to startup_stm32f411xe.o(HEAP) for Heap_Mem
+    startup_stm32f411xe.o(.text) refers to startup_stm32f411xe.o(STACK) for Stack_Mem
+    system_stm32f4xx.o(.ARM.exidx.text.SystemInit) refers to system_stm32f4xx.o(.text.SystemInit) for [Anonymous Symbol]
+    system_stm32f4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.data.SystemCoreClock) for SystemCoreClock
+    system_stm32f4xx.o(.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.rodata.AHBPrescTable) for AHBPrescTable
+    system_stm32f4xx.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    printf.o(.text) refers (Special) to _printf_a.o(.ARM.Collect$$_printf_percent$$00000006) for _printf_a
+    printf.o(.text) refers (Special) to _printf_c.o(.ARM.Collect$$_printf_percent$$00000013) for _printf_c
+    printf.o(.text) refers (Special) to _printf_charcount.o(.text) for _printf_charcount
+    printf.o(.text) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
+    printf.o(.text) refers (Special) to _printf_e.o(.ARM.Collect$$_printf_percent$$00000004) for _printf_e
+    printf.o(.text) refers (Special) to _printf_f.o(.ARM.Collect$$_printf_percent$$00000003) for _printf_f
+    printf.o(.text) refers (Special) to printf1.o(x$fpl$printf1) for _printf_fp_dec
+    printf.o(.text) refers (Special) to printf2.o(x$fpl$printf2) for _printf_fp_hex
+    printf.o(.text) refers (Special) to _printf_g.o(.ARM.Collect$$_printf_percent$$00000005) for _printf_g
+    printf.o(.text) refers (Special) to _printf_i.o(.ARM.Collect$$_printf_percent$$00000008) for _printf_i
+    printf.o(.text) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
+    printf.o(.text) refers (Special) to _printf_l.o(.ARM.Collect$$_printf_percent$$00000012) for _printf_l
+    printf.o(.text) refers (Special) to _printf_lc.o(.ARM.Collect$$_printf_percent$$00000015) for _printf_lc
+    printf.o(.text) refers (Special) to _printf_ll.o(.ARM.Collect$$_printf_percent$$00000007) for _printf_ll
+    printf.o(.text) refers (Special) to _printf_lld.o(.ARM.Collect$$_printf_percent$$0000000E) for _printf_lld
+    printf.o(.text) refers (Special) to _printf_lli.o(.ARM.Collect$$_printf_percent$$0000000D) for _printf_lli
+    printf.o(.text) refers (Special) to _printf_llo.o(.ARM.Collect$$_printf_percent$$00000010) for _printf_llo
+    printf.o(.text) refers (Special) to _printf_llu.o(.ARM.Collect$$_printf_percent$$0000000F) for _printf_llu
+    printf.o(.text) refers (Special) to _printf_llx.o(.ARM.Collect$$_printf_percent$$00000011) for _printf_llx
+    printf.o(.text) refers (Special) to _printf_longlong_dec.o(.text) for _printf_longlong_dec
+    printf.o(.text) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
+    printf.o(.text) refers (Special) to _printf_oct_int_ll.o(.text) for _printf_longlong_oct
+    printf.o(.text) refers (Special) to _printf_ls.o(.ARM.Collect$$_printf_percent$$00000016) for _printf_ls
+    printf.o(.text) refers (Special) to _printf_n.o(.ARM.Collect$$_printf_percent$$00000001) for _printf_n
+    printf.o(.text) refers (Special) to _printf_o.o(.ARM.Collect$$_printf_percent$$0000000B) for _printf_o
+    printf.o(.text) refers (Special) to _printf_p.o(.ARM.Collect$$_printf_percent$$00000002) for _printf_p
+    printf.o(.text) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    printf.o(.text) refers (Special) to _printf_pad.o(.text) for _printf_post_padding
+    printf.o(.text) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
+    printf.o(.text) refers (Special) to _printf_str.o(.text) for _printf_str
+    printf.o(.text) refers (Special) to _printf_truncate.o(.text) for _printf_truncate_signed
+    printf.o(.text) refers (Special) to _printf_u.o(.ARM.Collect$$_printf_percent$$0000000A) for _printf_u
+    printf.o(.text) refers (Special) to _printf_wctomb.o(.text) for _printf_wctomb
+    printf.o(.text) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
+    printf.o(.text) refers to _printf_char_file.o(.text) for _printf_char_file
+    printf.o(.text) refers to stdio_streams.o(.bss) for __stdout
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    Unwind-EHABI.cpp.o(.ARM.exidx.text.decode_eht_entry) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text.decode_eht_entry) refers to Unwind-EHABI.cpp.o(.text.decode_eht_entry) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Interpret) refers to libunwind.cpp.o(.text.__unw_get_reg) for __unw_get_reg
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Interpret) refers to libunwind.cpp.o(.text.__unw_set_reg) for __unw_set_reg
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Interpret) refers to Unwind-EHABI.cpp.o(.text._Unwind_VRS_Pop) for _Unwind_VRS_Pop
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Interpret) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Interpret) refers to Unwind-EHABI.cpp.o(.text._Unwind_VRS_Interpret) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Get) refers to libunwind.cpp.o(.text.__unw_get_reg) for __unw_get_reg
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Get) refers to libunwind.cpp.o(.text.__unw_save_vfp_as_X) for __unw_save_vfp_as_X
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Get) refers to libunwind.cpp.o(.text.__unw_get_fpreg) for __unw_get_fpreg
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Get) refers to abort.o(.text) for abort
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Get) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Get) refers to Unwind-EHABI.cpp.o(.text._Unwind_VRS_Get) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Set) refers to libunwind.cpp.o(.text.__unw_set_reg) for __unw_set_reg
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Set) refers to libunwind.cpp.o(.text.__unw_save_vfp_as_X) for __unw_save_vfp_as_X
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Set) refers to libunwind.cpp.o(.text.__unw_set_fpreg) for __unw_set_fpreg
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Set) refers to abort.o(.text) for abort
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Set) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Set) refers to Unwind-EHABI.cpp.o(.text._Unwind_VRS_Set) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Pop) refers to libunwind.cpp.o(.text.__unw_get_reg) for __unw_get_reg
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Pop) refers to Unwind-EHABI.cpp.o(.text._Unwind_VRS_Set) for _Unwind_VRS_Set
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Pop) refers to libunwind.cpp.o(.text.__unw_set_reg) for __unw_set_reg
+    Unwind-EHABI.cpp.o(.text._Unwind_VRS_Pop) refers to abort.o(.text) for abort
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Pop) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Pop) refers to Unwind-EHABI.cpp.o(.text._Unwind_VRS_Pop) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) refers to Unwind-EHABI.cpp.o(.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context) for (anonymous namespace)::unwindOneFrame(unsigned int, _Unwind_Control_Block*, _Unwind_Context*)
+    Unwind-EHABI.cpp.o(.ARM.exidx.text.__aeabi_unwind_cpp_pr0) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context) refers to libunwind.cpp.o(.text.__unw_get_proc_info) for __unw_get_proc_info
+    Unwind-EHABI.cpp.o(.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context) refers to libunwind.cpp.o(.text.__unw_get_reg) for __unw_get_reg
+    Unwind-EHABI.cpp.o(.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context) refers to libunwind.cpp.o(.text.__unw_step) for __unw_step
+    Unwind-EHABI.cpp.o(.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context) refers to abort.o(.text) for abort
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context) refers to Unwind-EHABI.cpp.o(.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr1) refers to Unwind-EHABI.cpp.o(.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context) for (anonymous namespace)::unwindOneFrame(unsigned int, _Unwind_Control_Block*, _Unwind_Context*)
+    Unwind-EHABI.cpp.o(.ARM.exidx.text.__aeabi_unwind_cpp_pr1) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text.__aeabi_unwind_cpp_pr1) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr1) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr2) refers to Unwind-EHABI.cpp.o(.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context) for (anonymous namespace)::unwindOneFrame(unsigned int, _Unwind_Control_Block*, _Unwind_Context*)
+    Unwind-EHABI.cpp.o(.ARM.exidx.text.__aeabi_unwind_cpp_pr2) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text.__aeabi_unwind_cpp_pr2) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr2) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text._Unwind_RaiseException) refers to UnwindRegistersSave.S.o(.text) for __unw_getcontext
+    Unwind-EHABI.cpp.o(.text._Unwind_RaiseException) refers to libunwind.cpp.o(.text.__unw_init_local) for __unw_init_local
+    Unwind-EHABI.cpp.o(.text._Unwind_RaiseException) refers to libunwind.cpp.o(.text.__unw_get_proc_info) for __unw_get_proc_info
+    Unwind-EHABI.cpp.o(.text._Unwind_RaiseException) refers to Unwind-EHABI.cpp.o(.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb) for unwind_phase2(unw_context_t*, unw_cursor_t*, _Unwind_Control_Block*, bool)
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_RaiseException) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_RaiseException) refers to Unwind-EHABI.cpp.o(.text._Unwind_RaiseException) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb) refers to libunwind.cpp.o(.text.__unw_init_local) for __unw_init_local
+    Unwind-EHABI.cpp.o(.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb) refers to libunwind.cpp.o(.text.__unw_set_reg) for __unw_set_reg
+    Unwind-EHABI.cpp.o(.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb) refers to libunwind.cpp.o(.text.__unw_get_reg) for __unw_get_reg
+    Unwind-EHABI.cpp.o(.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb) refers to libunwind.cpp.o(.text.__unw_get_proc_info) for __unw_get_proc_info
+    Unwind-EHABI.cpp.o(.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb) refers to abort.o(.text) for abort
+    Unwind-EHABI.cpp.o(.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb) refers to libunwind.cpp.o(.text.__unw_resume) for __unw_resume
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb) refers to Unwind-EHABI.cpp.o(.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_Complete) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_Complete) refers to Unwind-EHABI.cpp.o(.text._Unwind_Complete) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text._Unwind_Resume) refers to UnwindRegistersSave.S.o(.text) for __unw_getcontext
+    Unwind-EHABI.cpp.o(.text._Unwind_Resume) refers to Unwind-EHABI.cpp.o(.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb) for unwind_phase2(unw_context_t*, unw_cursor_t*, _Unwind_Control_Block*, bool)
+    Unwind-EHABI.cpp.o(.text._Unwind_Resume) refers to abort.o(.text) for abort
+    Unwind-EHABI.cpp.o(.text._Unwind_Resume) refers to Unwind-EHABI.cpp.o(.text._ZL20unwind_phase2_forcedP13unw_context_tP12unw_cursor_tP21_Unwind_Control_BlockPF19_Unwind_Reason_Codei14_Unwind_ActionPhS4_P15_Unwind_ContextPvESA_) for unwind_phase2_forced(unw_context_t*, unw_cursor_t*, _Unwind_Control_Block*, _Unwind_Reason_Code (*)(int, _Unwind_Action, unsigned char*, _Unwind_Control_Block*, _Unwind_Context*, void*), void*)
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_Resume) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_Resume) refers to Unwind-EHABI.cpp.o(.text._Unwind_Resume) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text._ZL20unwind_phase2_forcedP13unw_context_tP12unw_cursor_tP21_Unwind_Control_BlockPF19_Unwind_Reason_Codei14_Unwind_ActionPhS4_P15_Unwind_ContextPvESA_) refers to libunwind.cpp.o(.text.__unw_init_local) for __unw_init_local
+    Unwind-EHABI.cpp.o(.text._ZL20unwind_phase2_forcedP13unw_context_tP12unw_cursor_tP21_Unwind_Control_BlockPF19_Unwind_Reason_Codei14_Unwind_ActionPhS4_P15_Unwind_ContextPvESA_) refers to libunwind.cpp.o(.text.__unw_get_proc_info) for __unw_get_proc_info
+    Unwind-EHABI.cpp.o(.text._ZL20unwind_phase2_forcedP13unw_context_tP12unw_cursor_tP21_Unwind_Control_BlockPF19_Unwind_Reason_Codei14_Unwind_ActionPhS4_P15_Unwind_ContextPvESA_) refers to libunwind.cpp.o(.text.__unw_resume) for __unw_resume
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._ZL20unwind_phase2_forcedP13unw_context_tP12unw_cursor_tP21_Unwind_Control_BlockPF19_Unwind_Reason_Codei14_Unwind_ActionPhS4_P15_Unwind_ContextPvESA_) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._ZL20unwind_phase2_forcedP13unw_context_tP12unw_cursor_tP21_Unwind_Control_BlockPF19_Unwind_Reason_Codei14_Unwind_ActionPhS4_P15_Unwind_ContextPvESA_) refers to Unwind-EHABI.cpp.o(.text._ZL20unwind_phase2_forcedP13unw_context_tP12unw_cursor_tP21_Unwind_Control_BlockPF19_Unwind_Reason_Codei14_Unwind_ActionPhS4_P15_Unwind_ContextPvESA_) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text._Unwind_GetLanguageSpecificData) refers to libunwind.cpp.o(.text.__unw_get_proc_info) for __unw_get_proc_info
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_GetLanguageSpecificData) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_GetLanguageSpecificData) refers to Unwind-EHABI.cpp.o(.text._Unwind_GetLanguageSpecificData) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text._Unwind_ForcedUnwind) refers to UnwindRegistersSave.S.o(.text) for __unw_getcontext
+    Unwind-EHABI.cpp.o(.text._Unwind_ForcedUnwind) refers to Unwind-EHABI.cpp.o(.text._ZL20unwind_phase2_forcedP13unw_context_tP12unw_cursor_tP21_Unwind_Control_BlockPF19_Unwind_Reason_Codei14_Unwind_ActionPhS4_P15_Unwind_ContextPvESA_) for unwind_phase2_forced(unw_context_t*, unw_cursor_t*, _Unwind_Control_Block*, _Unwind_Reason_Code (*)(int, _Unwind_Action, unsigned char*, _Unwind_Control_Block*, _Unwind_Context*, void*), void*)
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_ForcedUnwind) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_ForcedUnwind) refers to Unwind-EHABI.cpp.o(.text._Unwind_ForcedUnwind) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text._Unwind_GetRegionStart) refers to libunwind.cpp.o(.text.__unw_get_proc_info) for __unw_get_proc_info
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_GetRegionStart) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_GetRegionStart) refers to Unwind-EHABI.cpp.o(.text._Unwind_GetRegionStart) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_DeleteException) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_DeleteException) refers to Unwind-EHABI.cpp.o(.text._Unwind_DeleteException) for [Anonymous Symbol]
+    Unwind-EHABI.cpp.o(.text.__gnu_unwind_frame) refers to libunwind.cpp.o(.text.__unw_step) for __unw_step
+    Unwind-EHABI.cpp.o(.ARM.exidx.text.__gnu_unwind_frame) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    Unwind-EHABI.cpp.o(.ARM.exidx.text.__gnu_unwind_frame) refers to Unwind-EHABI.cpp.o(.text.__gnu_unwind_frame) for [Anonymous Symbol]
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    __printf.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    _printf_str.o(.text) refers (Special) to _printf_char.o(.text) for _printf_cs_common
+    _printf_str.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
+    _printf_str.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_post_padding
+    _printf_dec.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_signed
+    _printf_dec.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_unsigned
+    _printf_dec.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_char_file.o(.text) refers to _printf_char_common.o(.text) for _printf_char_common
+    _printf_char_file.o(.text) refers to ferror.o(.text) for ferror
+    _printf_char_file.o(.text) refers to fputc.o(i.fputc) for fputc
+    _printf_wctomb.o(.text) refers (Special) to _printf_wchar.o(.text) for _printf_lcs_common
+    _printf_wctomb.o(.text) refers to _c16rtomb.o(.text) for _wcrtomb
+    _printf_wctomb.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
+    _printf_wctomb.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_post_padding
+    _printf_wctomb.o(.text) refers to _printf_wctomb.o(.constdata) for .constdata
+    _printf_wctomb.o(.constdata) refers (Special) to _printf_wchar.o(.text) for _printf_lcs_common
+    _printf_longlong_dec.o(.text) refers to lludiv10.o(.text) for _ll_udiv10
+    _printf_longlong_dec.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_oct_ll.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_oct_int.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_unsigned
+    _printf_oct_int.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_oct_int_ll.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_oct_int_ll.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_unsigned
+    _printf_hex_ll.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_ll.o(.text) refers to _printf_hex_ll.o(.constdata) for .constdata
+    _printf_hex_int.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_unsigned
+    _printf_hex_int.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_int.o(.text) refers to _printf_hex_int.o(.constdata) for .constdata
+    _printf_hex_int_ll.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_int_ll.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_unsigned
+    _printf_hex_int_ll.o(.text) refers to _printf_hex_int_ll.o(.constdata) for .constdata
+    _printf_hex_ptr.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_ptr.o(.text) refers to _printf_hex_ptr.o(.constdata) for .constdata
+    _printf_hex_int_ptr.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_int_ptr.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_unsigned
+    _printf_hex_int_ptr.o(.text) refers to _printf_hex_int_ptr.o(.constdata) for .constdata
+    _printf_hex_ll_ptr.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_ll_ptr.o(.text) refers to _printf_hex_ll_ptr.o(.constdata) for .constdata
+    _printf_hex_int_ll_ptr.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
+    _printf_hex_int_ll_ptr.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_unsigned
+    _printf_hex_int_ll_ptr.o(.text) refers to _printf_hex_int_ll_ptr.o(.constdata) for .constdata
+    __printf_flags.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags.o(.text) refers to __printf_flags.o(.constdata) for .constdata
+    __printf_ss.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss.o(.text) refers to __printf_flags_ss.o(.constdata) for .constdata
+    __printf_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_flags_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_wp.o(.text) refers to __printf_flags_wp.o(.constdata) for .constdata
+    __printf_ss_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_ss_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss_wp.o(.text) refers to __printf_wp.o(i._is_digit) for _is_digit
+    __printf_flags_ss_wp.o(.text) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    __printf_flags_ss_wp.o(.text) refers to __printf_flags_ss_wp.o(.constdata) for .constdata
+    _printf_c.o(.ARM.Collect$$_printf_percent$$00000013) refers (Weak) to _printf_char.o(.text) for _printf_char
+    _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) refers (Weak) to _printf_char.o(.text) for _printf_string
+    _printf_n.o(.ARM.Collect$$_printf_percent$$00000001) refers (Weak) to _printf_charcount.o(.text) for _printf_charcount
+    _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) refers (Weak) to _printf_hex_int_ll_ptr.o(.text) for _printf_int_hex
+    _printf_p.o(.ARM.Collect$$_printf_percent$$00000002) refers (Weak) to _printf_hex_int_ll_ptr.o(.text) for _printf_hex_ptr
+    _printf_o.o(.ARM.Collect$$_printf_percent$$0000000B) refers (Weak) to _printf_oct_int_ll.o(.text) for _printf_int_oct
+    _printf_i.o(.ARM.Collect$$_printf_percent$$00000008) refers (Weak) to _printf_dec.o(.text) for _printf_int_dec
+    _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) refers (Weak) to _printf_dec.o(.text) for _printf_int_dec
+    _printf_u.o(.ARM.Collect$$_printf_percent$$0000000A) refers (Weak) to _printf_dec.o(.text) for _printf_int_dec
+    _printf_f.o(.ARM.Collect$$_printf_percent$$00000003) refers (Weak) to printf1.o(x$fpl$printf1) for _printf_fp_dec
+    _printf_e.o(.ARM.Collect$$_printf_percent$$00000004) refers (Weak) to printf1.o(x$fpl$printf1) for _printf_fp_dec
+    _printf_g.o(.ARM.Collect$$_printf_percent$$00000005) refers (Weak) to printf1.o(x$fpl$printf1) for _printf_fp_dec
+    _printf_a.o(.ARM.Collect$$_printf_percent$$00000006) refers (Weak) to printf2.o(x$fpl$printf2) for _printf_fp_hex
+    _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) refers (Special) to _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017) for _printf_percent_end
+    _printf_lli.o(.ARM.Collect$$_printf_percent$$0000000D) refers (Special) to _printf_ll.o(.ARM.Collect$$_printf_percent$$00000007) for _printf_ll
+    _printf_lli.o(.ARM.Collect$$_printf_percent$$0000000D) refers (Weak) to _printf_longlong_dec.o(.text) for _printf_longlong_dec
+    _printf_lld.o(.ARM.Collect$$_printf_percent$$0000000E) refers (Special) to _printf_ll.o(.ARM.Collect$$_printf_percent$$00000007) for _printf_ll
+    _printf_lld.o(.ARM.Collect$$_printf_percent$$0000000E) refers (Weak) to _printf_longlong_dec.o(.text) for _printf_longlong_dec
+    _printf_llu.o(.ARM.Collect$$_printf_percent$$0000000F) refers (Special) to _printf_ll.o(.ARM.Collect$$_printf_percent$$00000007) for _printf_ll
+    _printf_llu.o(.ARM.Collect$$_printf_percent$$0000000F) refers (Weak) to _printf_longlong_dec.o(.text) for _printf_longlong_dec
+    _printf_lc.o(.ARM.Collect$$_printf_percent$$00000015) refers (Special) to _printf_l.o(.ARM.Collect$$_printf_percent$$00000012) for _printf_l
+    _printf_lc.o(.ARM.Collect$$_printf_percent$$00000015) refers (Weak) to _printf_wchar.o(.text) for _printf_wchar
+    _printf_ls.o(.ARM.Collect$$_printf_percent$$00000016) refers (Special) to _printf_l.o(.ARM.Collect$$_printf_percent$$00000012) for _printf_l
+    _printf_ls.o(.ARM.Collect$$_printf_percent$$00000016) refers (Weak) to _printf_wchar.o(.text) for _printf_wstring
+    _printf_llo.o(.ARM.Collect$$_printf_percent$$00000010) refers (Special) to _printf_ll.o(.ARM.Collect$$_printf_percent$$00000007) for _printf_ll
+    _printf_llo.o(.ARM.Collect$$_printf_percent$$00000010) refers (Weak) to _printf_oct_int_ll.o(.text) for _printf_ll_oct
+    _printf_llx.o(.ARM.Collect$$_printf_percent$$00000011) refers (Special) to _printf_ll.o(.ARM.Collect$$_printf_percent$$00000007) for _printf_ll
+    _printf_llx.o(.ARM.Collect$$_printf_percent$$00000011) refers (Weak) to _printf_hex_int_ll_ptr.o(.text) for _printf_ll_hex
+    stdio_streams.o(.bss) refers (Special) to initio.o(.text) for _initio
+    stdio_streams.o(.bss) refers (Special) to initio.o(.text) for _initio
+    stdio_streams.o(.bss) refers (Special) to initio.o(.text) for _initio
+    stdio_streams.o(.data) refers (Special) to initio.o(.text) for _initio
+    stdio_streams.o(.data) refers (Special) to initio.o(.text) for _initio
+    stdio_streams.o(.data) refers (Special) to initio.o(.text) for _initio
+    abort.o(.text) refers to defsig_abrt_outer.o(.text) for __rt_SIGABRT
+    abort.o(.text) refers (Weak) to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    abort.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    printf1.o(x$fpl$printf1) refers to _printf_fp_dec.o(.text) for _printf_fp_dec_real
+    printf2.o(x$fpl$printf2) refers to _printf_fp_hex.o(.text) for _printf_fp_hex_real
+    printf2b.o(x$fpl$printf2) refers to _printf_fp_hex.o(.text) for _printf_fp_hex_real
+    libunwind.cpp.o(.text.__unw_init_local) refers to libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) for vtable for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>
+    libunwind.cpp.o(.text.__unw_init_local) refers to libunwind.cpp.o(.bss._ZN9libunwind17LocalAddressSpace17sThisAddressSpaceE) for libunwind::LocalAddressSpace::sThisAddressSpace
+    libunwind.cpp.o(.text.__unw_init_local) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    libunwind.cpp.o(.text.__unw_init_local) refers to rt_memclr_w.o(.text) for __aeabi_memclr8
+    libunwind.cpp.o(.text.__unw_init_local) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE24setInfoBasedOnIPRegisterEb) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::setInfoBasedOnIPRegister(bool)
+    libunwind.cpp.o(.ARM.exidx.text.__unw_init_local) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_init_local) refers to libunwind.cpp.o(.text.__unw_init_local) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_get_reg) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_get_reg) refers to libunwind.cpp.o(.text.__unw_get_reg) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_set_reg) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_set_reg) refers to libunwind.cpp.o(.text.__unw_set_reg) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_get_fpreg) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_get_fpreg) refers to libunwind.cpp.o(.text.__unw_get_fpreg) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_set_fpreg) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_set_fpreg) refers to libunwind.cpp.o(.text.__unw_set_fpreg) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_step) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_step) refers to libunwind.cpp.o(.text.__unw_step) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_step_stage2) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_step_stage2) refers to libunwind.cpp.o(.text.__unw_step_stage2) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_get_proc_info) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_get_proc_info) refers to libunwind.cpp.o(.text.__unw_get_proc_info) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_resume) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_resume) refers to libunwind.cpp.o(.text.__unw_resume) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_get_proc_name) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_get_proc_name) refers to libunwind.cpp.o(.text.__unw_get_proc_name) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_is_fpreg) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_is_fpreg) refers to libunwind.cpp.o(.text.__unw_is_fpreg) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_regname) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_regname) refers to libunwind.cpp.o(.text.__unw_regname) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_is_signal_frame) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_is_signal_frame) refers to libunwind.cpp.o(.text.__unw_is_signal_frame) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text.__unw_save_vfp_as_X) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text.__unw_save_vfp_as_X) refers to libunwind.cpp.o(.text.__unw_save_vfp_as_X) for [Anonymous Symbol]
+    libunwind.cpp.o(.data.unw_local_addr_space) refers to libunwind.cpp.o(.bss._ZN9libunwind17LocalAddressSpace17sThisAddressSpaceE) for libunwind::LocalAddressSpace::sThisAddressSpace
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_exit_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to test.o(.text.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    _printf_intcommon.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
+    _printf_intcommon.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
+    _printf_intcommon.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_post_padding
+    _printf_fp_dec.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    _printf_fp_dec.o(.text) refers (Special) to lc_numeric_c.o(locale$$code) for _get_lc_numeric
+    _printf_fp_dec.o(.text) refers to bigflt0.o(.text) for _btod_etento
+    _printf_fp_dec.o(.text) refers to btod.o(CL$$btod_d2e) for _btod_d2e
+    _printf_fp_dec.o(.text) refers to btod.o(CL$$btod_ediv) for _btod_ediv
+    _printf_fp_dec.o(.text) refers to btod.o(CL$$btod_emul) for _btod_emul
+    _printf_fp_dec.o(.text) refers to lludiv10.o(.text) for _ll_udiv10
+    _printf_fp_dec.o(.text) refers to fpclassify.o(i.__ARM_fpclassify) for __ARM_fpclassify
+    _printf_fp_dec.o(.text) refers to _printf_fp_infnan.o(.text) for _printf_fp_infnan
+    _printf_fp_dec.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
+    _printf_fp_dec.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
+    _printf_fp_dec.o(.text) refers to rt_locale_intlibspace.o(.text) for __rt_locale
+    _printf_fp_dec.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_post_padding
+    _printf_fp_dec_accurate.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    _printf_fp_dec_accurate.o(.text) refers (Special) to lc_numeric_c.o(locale$$code) for _get_lc_numeric
+    _printf_fp_dec_accurate.o(.text) refers to btod_accurate.o(.text) for _btod_main
+    _printf_fp_dec_accurate.o(.text) refers to fpclassify.o(i.__ARM_fpclassify) for __ARM_fpclassify
+    _printf_fp_dec_accurate.o(.text) refers to _printf_fp_infnan.o(.text) for _printf_fp_infnan
+    _printf_fp_dec_accurate.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
+    _printf_fp_dec_accurate.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
+    _printf_fp_dec_accurate.o(.text) refers to rt_locale_intlibspace.o(.text) for __rt_locale
+    _printf_fp_dec_accurate.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_post_padding
+    _printf_fp_hex.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    _printf_fp_hex.o(.text) refers to fpclassify.o(i.__ARM_fpclassify) for __ARM_fpclassify
+    _printf_fp_hex.o(.text) refers to _printf_fp_infnan.o(.text) for _printf_fp_infnan
+    _printf_fp_hex.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
+    _printf_fp_hex.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
+    _printf_fp_hex.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_post_padding
+    _printf_fp_hex.o(.text) refers to _printf_fp_hex.o(.constdata) for .constdata
+    _printf_fp_hex.o(.constdata) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    _printf_char_common.o(.text) refers to __printf_flags_ss_wp.o(.text) for __printf
+    _printf_char.o(.text) refers (Weak) to _printf_str.o(.text) for _printf_str
+    _printf_wchar.o(.text) refers (Weak) to _printf_wctomb.o(.text) for _printf_wctomb
+    fputc.o(i.fputc) refers to flsbuf.o(.text) for __flsbuf_byte
+    initio.o(.text) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000026) for __rt_lib_init_stdio_2
+    initio.o(.text) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000003) for __rt_lib_shutdown_stdio_2
+    initio.o(.text) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    initio.o(.text) refers to fopen.o(.text) for freopen
+    initio.o(.text) refers to defsig_rtred_outer.o(.text) for __rt_SIGRTRED
+    initio.o(.text) refers to setvbuf.o(.text) for setvbuf
+    initio.o(.text) refers to fclose.o(.text) for _fclose_internal
+    initio.o(.text) refers to h1_free.o(.text) for free
+    initio.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    initio.o(.text) refers to stdio_streams.o(.bss) for __stdout
+    initio.o(.text) refers to stdio_streams.o(.bss) for __stderr
+    initio.o(.text) refers to stdio_streams.o(.data) for __aeabi_stdin
+    initio.o(.text) refers to stdio_streams.o(.data) for __aeabi_stdout
+    initio.o(.text) refers to stdio_streams.o(.data) for __aeabi_stderr
+    initio.o(.text) refers to retarget_io.o(.rodata.__stdin_name) for __stdin_name
+    initio.o(.text) refers to retarget_io.o(.rodata.__stdout_name) for __stdout_name
+    initio.o(.text) refers to retarget_io.o(.rodata.__stderr_name) for __stderr_name
+    initio_locked.o(.text) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000026) for __rt_lib_init_stdio_2
+    initio_locked.o(.text) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000003) for __rt_lib_shutdown_stdio_2
+    initio_locked.o(.text) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    initio_locked.o(.text) refers to fopen.o(.text) for freopen
+    initio_locked.o(.text) refers to defsig_rtred_outer.o(.text) for __rt_SIGRTRED
+    initio_locked.o(.text) refers to setvbuf.o(.text) for setvbuf
+    initio_locked.o(.text) refers to fclose.o(.text) for _fclose_internal
+    initio_locked.o(.text) refers to h1_free.o(.text) for free
+    initio_locked.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    initio_locked.o(.text) refers to stdio_streams.o(.bss) for __stdout
+    initio_locked.o(.text) refers to stdio_streams.o(.bss) for __stderr
+    initio_locked.o(.text) refers to stdio_streams.o(.data) for __aeabi_stdin
+    initio_locked.o(.text) refers to stdio_streams.o(.data) for __aeabi_stdout
+    initio_locked.o(.text) refers to stdio_streams.o(.data) for __aeabi_stderr
+    initio_locked.o(.text) refers to streamlock.o(.data) for _stream_list_lock
+    initio_locked.o(.text) refers to retarget_io.o(.rodata.__stdin_name) for __stdin_name
+    initio_locked.o(.text) refers to retarget_io.o(.rodata.__stdout_name) for __stdout_name
+    initio_locked.o(.text) refers to retarget_io.o(.rodata.__stderr_name) for __stderr_name
+    _c16rtomb.o(.text) refers to rt_ctype_table.o(.text) for __rt_ctype_table
+    defsig_abrt_outer.o(.text) refers to defsig_abrt_inner.o(.text) for __rt_SIGABRT_inner
+    defsig_abrt_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_abrt_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_memcpy_v6.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_stm32f411xe.o(.text) for __user_initial_stackheap
+    rt_ctype_table.o(.text) refers to rt_locale_intlibspace.o(.text) for __rt_locale
+    rt_ctype_table.o(.text) refers to lc_ctype_c.o(locale$$code) for _get_lc_ctype
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    rt_locale.o(.text) refers to rt_locale.o(.bss) for __rt_locale_data
+    rt_locale_intlibspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    free.o(.text) refers (Special) to hguard.o(.text) for __heap$guard
+    free.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    free.o(.text) refers to heapstubs.o(.text) for __Heap_Free
+    h1_free.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    h1_free_threads.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i._FDIterate) refers to heap2.o(.conststring) for .conststring
+    heap2.o(i.__Heap_ProvideMemory$realtime) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2.o(i.__Heap_ProvideMemory$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i.__Heap_Stats$realtime) refers to heap2.o(i._Heap2_StatsIterate) for _Heap2_StatsIterate
+    heap2.o(i.__Heap_Valid$realtime) refers to heap2.o(i._FDIterate) for _FDIterate
+    heap2.o(i.__Heap_Valid$realtime) refers to heap2.o(.conststring) for .conststring
+    heap2.o(i.free$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i.free$realtime) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2.o(i.free$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i.malloc$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i.malloc$realtime) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2.o(i.malloc$realtime) refers to init_alloc.o(.text) for __Heap_Full
+    heap2.o(i.malloc$realtime) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2.o(i.malloc$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i.posix_memalign$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i.posix_memalign$realtime) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2.o(i.posix_memalign$realtime) refers to init_alloc.o(.text) for __Heap_Full
+    heap2.o(i.posix_memalign$realtime) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2.o(i.posix_memalign$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i.realloc$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i.realloc$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i.realloc$realtime) refers to h1_free.o(.text) for free
+    heap2.o(i.realloc$realtime) refers to h1_alloc.o(.text) for malloc
+    heap2.o(i.realloc$realtime) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2.o(i.realloc$realtime) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    heap2_threads.o(i._FDIterate) refers to heap2_threads.o(.conststring) for .conststring
+    heap2_threads.o(i.__Heap_Initialize$realtime$concurrent) refers to mutex_dummy.o(.text) for _mutex_initialize
+    heap2_threads.o(i.__Heap_ProvideMemory$realtime$concurrent) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2_threads.o(i.__Heap_ProvideMemory$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2_threads.o(i.__Heap_Stats$realtime$concurrent) refers to heap2_threads.o(i._Heap2_StatsIterate) for _Heap2_StatsIterate
+    heap2_threads.o(i.__Heap_Valid$realtime$concurrent) refers to heap2_threads.o(i._FDIterate) for _FDIterate
+    heap2_threads.o(i.__Heap_Valid$realtime$concurrent) refers to heap2_threads.o(.conststring) for .conststring
+    heap2_threads.o(i.free$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2_threads.o(i.free$realtime$concurrent) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2_threads.o(i.free$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2_threads.o(i.malloc$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2_threads.o(i.malloc$realtime$concurrent) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2_threads.o(i.malloc$realtime$concurrent) refers to init_alloc.o(.text) for __Heap_Full
+    heap2_threads.o(i.malloc$realtime$concurrent) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2_threads.o(i.malloc$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2_threads.o(i.posix_memalign$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2_threads.o(i.posix_memalign$realtime$concurrent) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2_threads.o(i.posix_memalign$realtime$concurrent) refers to init_alloc.o(.text) for __Heap_Full
+    heap2_threads.o(i.posix_memalign$realtime$concurrent) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2_threads.o(i.posix_memalign$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to h1_free.o(.text) for free
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to h1_alloc.o(.text) for malloc
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    _printf_fp_infnan.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
+    _printf_fp_infnan.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_post_padding
+    bigflt0.o(.text) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    bigflt0.o(.text) refers to btod.o(CL$$btod_emul) for _btod_emul
+    bigflt0.o(.text) refers to btod.o(CL$$btod_ediv) for _btod_ediv
+    bigflt0.o(.text) refers to bigflt0.o(.constdata) for .constdata
+    bigflt0.o(.constdata) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_d2e) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_d2e) refers to btod.o(CL$$btod_d2e_norm_op1) for _d2e_norm_op1
+    btod.o(CL$$btod_d2e_norm_op1) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_d2e_norm_op1) refers to btod.o(CL$$btod_d2e_denorm_low) for _d2e_denorm_low
+    btod.o(CL$$btod_d2e_denorm_low) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_emul) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_emul) refers to btod.o(CL$$btod_mult_common) for __btod_mult_common
+    btod.o(CL$$btod_emul) refers to btod.o(CL$$btod_e2e) for _e2e
+    btod.o(CL$$btod_ediv) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_ediv) refers to btod.o(CL$$btod_div_common) for __btod_div_common
+    btod.o(CL$$btod_ediv) refers to btod.o(CL$$btod_e2e) for _e2e
+    btod.o(CL$$btod_emuld) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_emuld) refers to btod.o(CL$$btod_mult_common) for __btod_mult_common
+    btod.o(CL$$btod_emuld) refers to btod.o(CL$$btod_e2d) for _e2d
+    btod.o(CL$$btod_edivd) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_edivd) refers to btod.o(CL$$btod_div_common) for __btod_div_common
+    btod.o(CL$$btod_edivd) refers to btod.o(CL$$btod_e2d) for _e2d
+    btod.o(CL$$btod_e2e) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_e2d) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_e2d) refers to btod.o(CL$$btod_e2e) for _e2e
+    btod.o(CL$$btod_mult_common) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod.o(CL$$btod_div_common) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    btod_accurate.o(.text) refers to btod_accurate_common.o(.text) for _btod_common
+    flsbuf.o(.text) refers to stdio.o(.text) for _deferredlazyseek
+    flsbuf.o(.text) refers to retarget_io.o(.text._sys_flen) for _sys_flen
+    flsbuf.o(.text) refers to retarget_io.o(.text._sys_istty) for _sys_istty
+    flsbuf.o(.text) refers to h1_alloc.o(.text) for malloc
+    streamlock.o(.data) refers (Special) to initio.o(.text) for _initio
+    fopen.o(.text) refers to fclose.o(.text) for _fclose_internal
+    fopen.o(.text) refers to retarget_io.o(.text._sys_open) for _sys_open
+    fopen.o(.text) refers to fseek.o(.text) for _fseek
+    fopen.o(.text) refers to h1_alloc.o(.text) for malloc
+    fopen.o(.text) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    fopen.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    fclose.o(.text) refers to stdio.o(.text) for _fflush
+    fclose.o(.text) refers to retarget_io.o(.text._sys_close) for _sys_close
+    fclose.o(.text) refers to h1_free.o(.text) for free
+    fclose.o(.text) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    fopen_locked.o(.text) refers to fclose.o(.text) for _fclose_internal
+    fopen_locked.o(.text) refers to retarget_io.o(.text._sys_open) for _sys_open
+    fopen_locked.o(.text) refers to fseek.o(.text) for _fseek
+    fopen_locked.o(.text) refers to h1_alloc.o(.text) for malloc
+    fopen_locked.o(.text) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    fopen_locked.o(.text) refers to streamlock.o(.data) for _stream_list_lock
+    fopen_locked.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    lc_numeric_c.o(locale$$data) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000018) for __rt_lib_init_lc_numeric_2
+    lc_numeric_c.o(locale$$code) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000018) for __rt_lib_init_lc_numeric_2
+    lc_numeric_c.o(locale$$code) refers to strcmpv7em.o(.text) for strcmp
+    lc_numeric_c.o(locale$$code) refers to lc_numeric_c.o(locale$$data) for __lcnum_c_name
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_outer.o(.text) refers to defsig_rtred_inner.o(.text) for __rt_SIGRTRED_inner
+    defsig_rtred_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtred_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000034) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000001) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000006) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000010) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_relocate_pie_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000035) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000027) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_user_alloc_1
+    libinit2.o(.ARM.Collect$$libinit$$00000001) refers to fpinit.o(x$fpl$fpinit) for _fp_init
+    libinit2.o(.ARM.Collect$$libinit$$00000007) refers (Weak) to init_alloc.o(.text) for _init_alloc
+    libinit2.o(.ARM.Collect$$libinit$$00000011) refers (Weak) to rt_locale_intlibspace.o(.text) for __rt_locale
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers (Weak) to lc_ctype_c.o(locale$$code) for _get_lc_ctype
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers (Weak) to lc_numeric_c.o(locale$$code) for _get_lc_numeric
+    libinit2.o(.ARM.Collect$$libinit$$0000001A) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers (Weak) to initio.o(.text) for _initio
+    libinit2.o(.ARM.Collect$$libinit$$00000028) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000029) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libshutdown2.o(.ARM.Collect$$libshutdown$$00000003) refers (Weak) to initio.o(.text) for _terminateio
+    libshutdown2.o(.ARM.Collect$$libshutdown$$0000000D) refers (Weak) to term_alloc.o(.text) for _terminate_alloc
+    flsbuf_fwide.o(.text) refers to flsbuf.o(.text) for __flsbuf
+    istatus.o(x$fpl$ieeestatus) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    fpclassify.o(i.__ARM_fpclassify) refers (Special) to usenofp.o(x$fpl$usenofp) for __I$use$fp
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    rt_heap_descriptor.o(.text) refers to rt_heap_descriptor.o(.bss) for __rt_heap_descriptor_data
+    rt_heap_descriptor_intlibspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    init_alloc.o(.text) refers (Special) to hguard.o(.text) for __heap$guard
+    init_alloc.o(.text) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000007) for __rt_lib_init_heap_2
+    init_alloc.o(.text) refers (Special) to maybetermalloc1.o(.text) for _maybe_terminate_alloc
+    init_alloc.o(.text) refers to h1_extend.o(.text) for __Heap_ProvideMemory
+    init_alloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    init_alloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    init_alloc.o(.text) refers to h1_init.o(.text) for __Heap_Initialize
+    malloc.o(.text) refers (Special) to hguard.o(.text) for __heap$guard
+    malloc.o(.text) refers (Special) to init_alloc.o(.text) for _init_alloc
+    malloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    malloc.o(.text) refers to heapstubs.o(.text) for __Heap_Alloc
+    h1_alloc.o(.text) refers (Special) to h1_init.o(.text) for __Heap_Initialize
+    h1_alloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    h1_alloc.o(.text) refers to init_alloc.o(.text) for __Heap_Full
+    h1_alloc_threads.o(.text) refers (Special) to h1_init.o(.text) for __Heap_Initialize
+    h1_alloc_threads.o(.text) refers to init_alloc.o(.text) for __Heap_Full
+    h1_alloc_threads.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    _printf_char_file_locked.o(.text) refers to _printf_char_common.o(.text) for _printf_char_common
+    _printf_char_file_locked.o(.text) refers to fputc.o(i._fputc$unlocked) for _fputc$unlocked
+    btod_accurate_common.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    fseek.o(.text) refers to retarget_io.o(.text._sys_istty) for _sys_istty
+    fseek.o(.text) refers to ftell.o(.text) for _ftell_internal
+    fseek.o(.text) refers to retarget_io.o(.text._sys_flen) for _sys_flen
+    fseek.o(.text) refers to stdio.o(.text) for _seterr
+    stdio.o(.text) refers to retarget_io.o(.text._sys_seek) for _sys_seek
+    stdio.o(.text) refers to retarget_io.o(.text._sys_write) for _sys_write
+    fwritefast.o(.text) refers to stdio.o(.text) for _writebuf
+    fwritefast.o(.text) refers to flsbuf.o(.text) for __flsbuf_byte
+    fwritefast.o(.text) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    fwritefast_locked.o(.text) refers to stdio.o(.text) for _writebuf
+    fwritefast_locked.o(.text) refers to flsbuf.o(.text) for __flsbuf_byte
+    fwritefast_locked.o(.text) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    lc_ctype_c.o(locale$$data) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000014) for __rt_lib_init_lc_ctype_2
+    lc_ctype_c.o(locale$$code) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000014) for __rt_lib_init_lc_ctype_2
+    lc_ctype_c.o(locale$$code) refers to strcmpv7em.o(.text) for strcmp
+    lc_ctype_c.o(locale$$code) refers to lc_ctype_c.o(locale$$data) for __lcctype_c_name
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    assert_stdio.o(.text) refers to fputs.o(.text) for fputs
+    assert_stdio.o(.text) refers to fflush.o(.text) for fflush
+    assert_stdio.o(.text) refers to stdio_streams.o(.bss) for __stderr
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_wrch_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    maybetermalloc2.o(.text) refers (Special) to term_alloc.o(.text) for _terminate_alloc
+    h1_extend.o(.text) refers to h1_free.o(.text) for free
+    h1_init_threads.o(.text) refers to mutex_dummy.o(.text) for _mutex_initialize
+    h1_extend_threads.o(.text) refers to h1_free_threads.o(.text) for free_internal$concurrent
+    fflush.o(.text) refers to stdio.o(.text) for _fflush
+    fflush.o(.text) refers to fseek.o(.text) for _fseek
+    fflush.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    fputs.o(.text) refers to fputc.o(i.fputc) for fputc
+    ftell.o(.text) refers to rt_errno_addr_intlibspace.o(.text) for __aeabi_errno_addr
+    fflush_locked.o(.text) refers to stdio.o(.text) for _fflush
+    fflush_locked.o(.text) refers to fseek.o(.text) for _fseek
+    fflush_locked.o(.text) refers to fflush.o(.text) for _do_fflush
+    fflush_locked.o(.text) refers to streamlock.o(.data) for _stream_list_lock
+    fflush_locked.o(.text) refers to stdio_streams.o(.bss) for __stdin
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    defsig.o(CL$$defsig) refers to defsig_abrt_inner.o(.text) for __rt_SIGABRT_inner
+    defsig.o(CL$$defsig) refers to defsig_rtred_inner.o(.text) for __rt_SIGRTRED_inner
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    heapauxa.o(.text) refers to heapauxa.o(.data) for .data
+    _get_argv.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv.o(.text) refers to h1_alloc.o(.text) for malloc
+    _get_argv.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_command_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    rt_errno_addr.o(.text) refers to rt_errno_addr.o(.bss) for __aeabi_errno_addr_data
+    rt_errno_addr_intlibspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    term_alloc.o(.text) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E) for __rt_lib_shutdown_heap_2
+    term_alloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    term_alloc.o(.text) refers to h1_final.o(.text) for __Heap_Finalize
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind20AbstractUnwindCursorD2Ev) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind20AbstractUnwindCursorD2Ev) refers to libunwind.cpp.o(.text._ZN9libunwind20AbstractUnwindCursorD2Ev) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEED0Ev) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEED0Ev) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEED0Ev) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE8validRegEi) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE8validRegEi) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE8validRegEi) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6getRegEi) refers to abort.o(.text) for abort
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6getRegEi) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6getRegEi) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6getRegEi) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6setRegEij) refers to abort.o(.text) for abort
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6setRegEij) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6setRegEij) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6setRegEij) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13validFloatRegEi) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13validFloatRegEi) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13validFloatRegEi) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11getFloatRegEi) refers to UnwindRegistersSave.S.o(.text) for libunwind::Registers_arm::saveVFPWithFSTMX(void*)
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11getFloatRegEi) refers to abort.o(.text) for abort
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11getFloatRegEi) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11getFloatRegEi) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11getFloatRegEi) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11setFloatRegEiy) refers to UnwindRegistersSave.S.o(.text) for libunwind::Registers_arm::saveVFPWithFSTMX(void*)
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11setFloatRegEiy) refers to abort.o(.text) for abort
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11setFloatRegEiy) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11setFloatRegEiy) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11setFloatRegEiy) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE4stepEb) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13stepWithEHABIEv) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::stepWithEHABI()
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE4stepEb) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE4stepEb) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE4stepEb) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE7getInfoEP15unw_proc_info_t) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE7getInfoEP15unw_proc_info_t) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE7getInfoEP15unw_proc_info_t) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE7getInfoEP15unw_proc_info_t) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6jumptoEv) refers to libunwind.cpp.o(.text._ZN9libunwind13Registers_arm26restoreSavedFloatRegistersEv) for libunwind::Registers_arm::restoreSavedFloatRegisters()
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6jumptoEv) refers to UnwindRegistersRestore.S.o(.text) for libunwind::Registers_arm::restoreCoreAndJumpTo()
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6jumptoEv) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6jumptoEv) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6jumptoEv) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13isSignalFrameEv) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13isSignalFrameEv) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13isSignalFrameEv) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getFunctionNameEPcjPj) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getFunctionNameEPcjPj) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getFunctionNameEPcjPj) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE24setInfoBasedOnIPRegisterEb) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE23getInfoFromEHABISectionEjRKNS_18UnwindInfoSectionsE) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getInfoFromEHABISection(unsigned int, libunwind::UnwindInfoSections const&)
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE24setInfoBasedOnIPRegisterEb) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE24setInfoBasedOnIPRegisterEb) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE24setInfoBasedOnIPRegisterEb) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getRegisterNameEi) refers to libunwind.cpp.o(.text._ZN9libunwind13Registers_arm15getRegisterNameEi) for libunwind::Registers_arm::getRegisterName(int)
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getRegisterNameEi) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getRegisterNameEi) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getRegisterNameEi) for [Anonymous Symbol]
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE10saveVFPAsXEv) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE10saveVFPAsXEv) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE10saveVFPAsXEv) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13stepWithEHABIEv) refers to Unwind-EHABI.cpp.o(.text.decode_eht_entry) for decode_eht_entry
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13stepWithEHABIEv) refers to Unwind-EHABI.cpp.o(.text._Unwind_VRS_Interpret) for _Unwind_VRS_Interpret
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13stepWithEHABIEv) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13stepWithEHABIEv) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13stepWithEHABIEv) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind13Registers_arm26restoreSavedFloatRegistersEv) refers to UnwindRegistersRestore.S.o(.text) for libunwind::Registers_arm::restoreVFPWithFLDMX(void*)
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind13Registers_arm26restoreSavedFloatRegistersEv) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind13Registers_arm26restoreSavedFloatRegistersEv) refers to libunwind.cpp.o(.text._ZN9libunwind13Registers_arm26restoreSavedFloatRegistersEv) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE23getInfoFromEHABISectionEjRKNS_18UnwindInfoSectionsE) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE23getInfoFromEHABISectionEjRKNS_18UnwindInfoSectionsE) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr2) for __aeabi_unwind_cpp_pr2
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE23getInfoFromEHABISectionEjRKNS_18UnwindInfoSectionsE) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr1) for __aeabi_unwind_cpp_pr1
+    libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE23getInfoFromEHABISectionEjRKNS_18UnwindInfoSectionsE) refers to abort.o(.text) for abort
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE23getInfoFromEHABISectionEjRKNS_18UnwindInfoSectionsE) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE23getInfoFromEHABISectionEjRKNS_18UnwindInfoSectionsE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE23getInfoFromEHABISectionEjRKNS_18UnwindInfoSectionsE) for [Anonymous Symbol]
+    libunwind.cpp.o(.text._ZN9libunwind13Registers_arm15getRegisterNameEi) refers to libunwind.cpp.o(.rodata.str1.1) for .L.str
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind13Registers_arm15getRegisterNameEi) refers to Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0) for __aeabi_unwind_cpp_pr0
+    libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind13Registers_arm15getRegisterNameEi) refers to libunwind.cpp.o(.text._ZN9libunwind13Registers_arm15getRegisterNameEi) for [Anonymous Symbol]
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind20AbstractUnwindCursorD2Ev) for libunwind::AbstractUnwindCursor::~AbstractUnwindCursor__sub_object()
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEED0Ev) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::~UnwindCursor__deallocating()
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE8validRegEi) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::validReg(int)
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6getRegEi) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getReg(int)
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6setRegEij) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::setReg(int, unsigned int)
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13validFloatRegEi) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::validFloatReg(int)
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11getFloatRegEi) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getFloatReg(int)
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11setFloatRegEiy) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::setFloatReg(int, unsigned long long)
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE4stepEb) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::step(bool)
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE7getInfoEP15unw_proc_info_t) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getInfo(unw_proc_info_t*)
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6jumptoEv) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::jumpto()
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13isSignalFrameEv) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::isSignalFrame()
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getFunctionNameEPcjPj) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getFunctionName(char*, unsigned int, unsigned int*)
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE24setInfoBasedOnIPRegisterEb) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::setInfoBasedOnIPRegister(bool)
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getRegisterNameEi) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::getRegisterName(int)
+    libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE) refers to libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE10saveVFPAsXEv) for libunwind::UnwindCursor<libunwind::LocalAddressSpace, libunwind::Registers_arm>::saveVFPAsX()
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing compute_single_digit.o(.ARM.exidx), (8 bytes).
+    Removing compute_hash.o(.ARM.exidx), (8 bytes).
+    Removing sum_of_natural_numbers.o(.ARM.exidx), (8 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing test.o(.text), (0 bytes).
+    Removing test.o(.ARM.exidx.text.main), (8 bytes).
+    Removing test.o(.ARM.use_no_argv), (4 bytes).
+    Removing retarget_io.o(.text), (0 bytes).
+    Removing retarget_io.o(.ARM.exidx.text.ITM_SendChar), (8 bytes).
+    Removing retarget_io.o(.text.ITM_ReceiveChar), (62 bytes).
+    Removing retarget_io.o(.ARM.exidx.text.ITM_ReceiveChar), (8 bytes).
+    Removing retarget_io.o(.ARM.exidx.text._sys_open), (8 bytes).
+    Removing retarget_io.o(.ARM.exidx.text._sys_close), (8 bytes).
+    Removing retarget_io.o(.ARM.exidx.text._sys_write), (8 bytes).
+    Removing retarget_io.o(.ARM.exidx.text.stdout_putchar), (8 bytes).
+    Removing retarget_io.o(.ARM.exidx.text.stderr_putchar), (8 bytes).
+    Removing retarget_io.o(.text._sys_read), (128 bytes).
+    Removing retarget_io.o(.ARM.exidx.text._sys_read), (8 bytes).
+    Removing retarget_io.o(.text.stdin_getchar), (30 bytes).
+    Removing retarget_io.o(.ARM.exidx.text.stdin_getchar), (8 bytes).
+    Removing retarget_io.o(.ARM.exidx.text._sys_istty), (8 bytes).
+    Removing retarget_io.o(.ARM.exidx.text._sys_seek), (8 bytes).
+    Removing retarget_io.o(.ARM.exidx.text._sys_flen), (8 bytes).
+    Removing retarget_io.o(.data.ITM_RxBuffer), (4 bytes).
+    Removing system_stm32f4xx.o(.text), (0 bytes).
+    Removing system_stm32f4xx.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_stm32f4xx.o(.text.SystemCoreClockUpdate), (302 bytes).
+    Removing system_stm32f4xx.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_stm32f4xx.o(.data.SystemCoreClock), (4 bytes).
+    Removing system_stm32f4xx.o(.rodata.AHBPrescTable), (16 bytes).
+    Removing system_stm32f4xx.o(.rodata.APBPrescTable), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text), (0 bytes).
+    Removing Unwind-EHABI.cpp.o(.text.decode_eht_entry), (82 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text.decode_eht_entry), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._Unwind_VRS_Interpret), (516 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Interpret), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._Unwind_VRS_Get), (110 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Get), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._Unwind_VRS_Set), (114 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Set), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._Unwind_VRS_Pop), (280 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_VRS_Pop), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr0), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text.__aeabi_unwind_cpp_pr0), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context), (210 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._ZN12_GLOBAL__N_114unwindOneFrameEjP21_Unwind_Control_BlockP15_Unwind_Context), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr1), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text.__aeabi_unwind_cpp_pr1), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text.__aeabi_unwind_cpp_pr2), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text.__aeabi_unwind_cpp_pr2), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._Unwind_RaiseException), (122 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_RaiseException), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb), (166 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._ZL13unwind_phase2P13unw_context_tP12unw_cursor_tP21_Unwind_Control_Blockb), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._Unwind_Complete), (2 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_Complete), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._Unwind_Resume), (56 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_Resume), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._ZL20unwind_phase2_forcedP13unw_context_tP12unw_cursor_tP21_Unwind_Control_BlockPF19_Unwind_Reason_Codei14_Unwind_ActionPhS4_P15_Unwind_ContextPvESA_), (136 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._ZL20unwind_phase2_forcedP13unw_context_tP12unw_cursor_tP21_Unwind_Control_BlockPF19_Unwind_Reason_Codei14_Unwind_ActionPhS4_P15_Unwind_ContextPvESA_), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._Unwind_GetLanguageSpecificData), (24 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_GetLanguageSpecificData), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._Unwind_ForcedUnwind), (46 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_ForcedUnwind), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._Unwind_GetRegionStart), (24 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_GetRegionStart), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text._Unwind_DeleteException), (12 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text._Unwind_DeleteException), (8 bytes).
+    Removing Unwind-EHABI.cpp.o(.text.__gnu_unwind_frame), (24 bytes).
+    Removing Unwind-EHABI.cpp.o(.ARM.exidx.text.__gnu_unwind_frame), (8 bytes).
+    Removing libunwind.cpp.o(.text), (0 bytes).
+    Removing libunwind.cpp.o(.text.__unw_init_local), (72 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_init_local), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_get_reg), (44 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_get_reg), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_set_reg), (104 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_set_reg), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_get_fpreg), (46 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_get_fpreg), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_set_fpreg), (54 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_set_fpreg), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_step), (8 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_step), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_step_stage2), (8 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_step_stage2), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_get_proc_info), (28 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_get_proc_info), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_resume), (18 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_resume), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_get_proc_name), (30 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_get_proc_name), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_is_fpreg), (10 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_is_fpreg), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_regname), (6 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_regname), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_is_signal_frame), (10 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_is_signal_frame), (8 bytes).
+    Removing libunwind.cpp.o(.text.__unw_save_vfp_as_X), (6 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text.__unw_save_vfp_as_X), (8 bytes).
+    Removing libunwind.cpp.o(.bss._ZN9libunwind17LocalAddressSpace17sThisAddressSpaceE), (1 bytes).
+    Removing libunwind.cpp.o(.data.unw_local_addr_space), (4 bytes).
+    Removing libunwind.cpp.o(.rodata.str1.1), (3 bytes).
+    Removing UnwindRegistersSave.S.o(.text), (46 bytes).
+    Removing UnwindRegistersRestore.S.o(.text), (38 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind20AbstractUnwindCursorD2Ev), (2 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind20AbstractUnwindCursorD2Ev), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEED0Ev), (2 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEED0Ev), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE8validRegEi), (12 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE8validRegEi), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6getRegEi), (58 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6getRegEi), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6setRegEij), (64 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6setRegEij), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13validFloatRegEi), (16 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13validFloatRegEi), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11getFloatRegEi), (100 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11getFloatRegEi), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11setFloatRegEiy), (110 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE11setFloatRegEiy), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE4stepEb), (48 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE4stepEb), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE7getInfoEP15unw_proc_info_t), (66 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE7getInfoEP15unw_proc_info_t), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6jumptoEv), (22 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE6jumptoEv), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13isSignalFrameEv), (6 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13isSignalFrameEv), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getFunctionNameEPcjPj), (16 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getFunctionNameEPcjPj), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE24setInfoBasedOnIPRegisterEb), (144 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE24setInfoBasedOnIPRegisterEb), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getRegisterNameEi), (6 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE15getRegisterNameEi), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE10saveVFPAsXEv), (8 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE10saveVFPAsXEv), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13stepWithEHABIEv), (48 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE13stepWithEHABIEv), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind13Registers_arm26restoreSavedFloatRegistersEv), (52 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind13Registers_arm26restoreSavedFloatRegistersEv), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE23getInfoFromEHABISectionEjRKNS_18UnwindInfoSectionsE), (400 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEE23getInfoFromEHABISectionEjRKNS_18UnwindInfoSectionsE), (8 bytes).
+    Removing libunwind.cpp.o(.text._ZN9libunwind13Registers_arm15getRegisterNameEi), (916 bytes).
+    Removing libunwind.cpp.o(.ARM.exidx.text._ZN9libunwind13Registers_arm15getRegisterNameEi), (8 bytes).
+    Removing libunwind.cpp.o(.rodata._ZTVN9libunwind12UnwindCursorINS_17LocalAddressSpaceENS_13Registers_armEEE), (72 bytes).
+
+145 unused section(s) (total 5778 bytes) removed from the image.
