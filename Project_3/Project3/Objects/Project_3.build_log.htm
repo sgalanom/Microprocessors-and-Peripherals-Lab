@@ -1,0 +1,806 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: DimitraMaria Tsakiridou, AuTh, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Keil_projects\Project_3\Project_3.uvprojx
+Project File Date:  05/26/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+dht11.c(2): warning: In file included from...
+./gpio.h(12): warning: In file included from...
+./platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+   18 | #include <STM32F4xx.h>
+      |          ^~~~~~~~~~~~~
+      |          <stm32f4xx.h>
+dht11.c(7): warning: no previous extern declaration for non-static variable 'dht11_pin' [-Wmissing-variable-declarations]
+    7 | Pin dht11_pin = DHT11_PIN;
+      |     ^
+dht11.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    7 | Pin dht11_pin = DHT11_PIN;
+      | ^
+dht11.c(36): warning: while loop has empty body [-Wempty-body]
+   36 |             while (!gpio_get(dht11_pin));
+      |                                         ^
+dht11.c(36): note: put the semicolon on a separate line to silence this warning
+dht11.c(40): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   40 |         data[i] = DHT11_ReadByte();
+      |         ^~~~
+dht11.c(43): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   43 |     if (data[4] == (data[0] + data[1] + data[2] + data[3])) {
+      |         ^~~~
+dht11.c(43): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   43 |     if (data[4] == (data[0] + data[1] + data[2] + data[3])) {
+      |                               ^~~~
+dht11.c(43): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   43 |     if (data[4] == (data[0] + data[1] + data[2] + data[3])) {
+      |                                         ^~~~
+dht11.c(43): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   43 |     if (data[4] == (data[0] + data[1] + data[2] + data[3])) {
+      |                                                   ^~~~
+dht11.c(44): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   44 |         *temperature = data[2];
+      |                        ^~~~
+9 warnings generated.
+compiling dht11.c...
+delay.c(1): warning: In file included from...
+./platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+   18 | #include <STM32F4xx.h>
+      |          ^~~~~~~~~~~~~
+      |          <stm32f4xx.h>
+1 warning generated.
+compiling delay.c...
+ext_led.c(2): warning: In file included from...
+./gpio.h(12): warning: In file included from...
+./platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+   18 | #include <STM32F4xx.h>
+      |          ^~~~~~~~~~~~~
+      |          <stm32f4xx.h>
+ext_led.c(6): warning: no previous extern declaration for non-static variable 'led_pin' [-Wmissing-variable-declarations]
+    6 | Pin led_pin = LED_PIN;
+      |     ^
+ext_led.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    6 | Pin led_pin = LED_PIN;
+      | ^
+2 warnings generated.
+compiling ext_led.c...
+adc.c(1): warning: In file included from...
+./platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+   18 | #include <STM32F4xx.h>
+      |          ^~~~~~~~~~~~~
+      |          <stm32f4xx.h>
+adc.c(3): warning: In file included from...
+./adc.h(10): warning: 'ADC1_BASE' macro redefined [-Wmacro-redefined]
+   10 | #define ADC1_BASE             (APB2PERIPH_BASE + 0x2000)
+      |         ^
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(678): note: previous definition is here
+  678 | #define ADC1_BASE             (APB2PERIPH_BASE + 0x2000UL)
+      |         ^
+adc.c(3): warning: In file included from...
+./adc.h(23): warning: 'GPIOA_BASE' macro redefined [-Wmacro-redefined]
+   23 | #define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000)
+      |         ^
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(693): note: previous definition is here
+  693 | #define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000UL)
+      |         ^
+adc.c(7): warning: no previous extern declaration for non-static variable 'PinMap_ADC' [-Wmissing-variable-declarations]
+    7 | const PinMap PinMap_ADC[] = {
+      |              ^
+adc.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    7 | const PinMap PinMap_ADC[] = {
+      |       ^
+adc.c(3): warning: In file included from...
+./adc.h(220): warning: padding size of 'analogin_s' with 3 bytes to alignment boundary [-Wpadded]
+  220 | typedef struct {
+      |         ^
+adc.c(67): warning: 35 enumeration values not explicitly handled in switch: 'NC', 'PA_8', 'PA_9'... [-Wswitch-enum]
+   67 |         switch (pin)
+      |                 ^~~
+adc.c(145): warning: implicit conversion changes signedness: 'const int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  145 |             return map->peripheral;
+      |             ~~~~~~ ~~~~~^~~~~~~~~~
+adc.c(167): warning: cast from function call of type 'uint32_t' (aka 'unsigned int') to non-matching type 'ADCName' [-Wbad-function-cast]
+  167 |                 obj->adc = (ADCName)pinmap_peripheral(pin);    
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~
+adc.c(3): warning: In file included from...
+./adc.h(180): warning: padding struct 'ADC_HandleTypeDef' with 2 bytes to align 'ErrorCode' [-Wpadded]
+  180 |   __IO uint32_t                 ErrorCode;                   /*!< ADC Error code */
+      |                                 ^
+adc.c(170): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  170 |     uint32_t function = pinmap_function(pin);   
+      |              ^
+adc.c(309): warning: implicit conversion changes signedness: 'const int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  309 |             return map->function;
+      |             ~~~~~~ ~~~~~^~~~~~~~
+adc.c(305): warning: no previous prototype for function 'pinmap_find_function' [-Wmissing-prototypes]
+  305 | uint32_t pinmap_find_function(Pin pin) {
+      |          ^
+adc.c(305): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  305 | uint32_t pinmap_find_function(Pin pin) {
+      | ^
+      | static 
+adc.c(372): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  372 |     GPIO_TypeDef *gpio = (GPIO_TypeDef *)gpio_add;
+      |                   ^
+adc.c(421): warning: 35 enumeration values not explicitly handled in switch: 'NC', 'PA_8', 'PA_9'... [-Wswitch-enum]
+  421 |         switch (pin)
+      |                 ^~~
+adc.c(546): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  546 |         return (_ADC_GetValue(&AdcHandle));
+      |         ~~~~~~  ^~~~~~~~~~~~~~~~~~~~~~~~~
+adc.c(5): warning: no previous extern declaration for non-static variable 'AdcHandle' [-Wmissing-variable-declarations]
+    5 | ADC_HandleTypeDef AdcHandle;
+      |                   ^
+adc.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    5 | ADC_HandleTypeDef AdcHandle;
+      | ^
+adc.c(146): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  146 |         map++;
+      |         ^~~
+adc.c(310): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  310 |         map++;
+      |         ^~~
+adc.c(335): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  335 |       map++;
+      |       ^~~
+adc.c(377): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  377 |     GPIO_InitStructure.Mode      = gpio_mode[mode];
+      |                                    ^~~~~~~~~
+20 warnings generated.
+compiling adc.c...
+comparator.c(1): warning: In file included from...
+./platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+   18 | #include <STM32F4xx.h>
+      |          ^~~~~~~~~~~~~
+      |          <stm32f4xx.h>
+comparator.c(2): warning: In file included from...
+./comparator.h(6): warning: In file included from...
+./adc.h(10): warning: 'ADC1_BASE' macro redefined [-Wmacro-redefined]
+   10 | #define ADC1_BASE             (APB2PERIPH_BASE + 0x2000)
+      |         ^
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(678): note: previous definition is here
+  678 | #define ADC1_BASE             (APB2PERIPH_BASE + 0x2000UL)
+      |         ^
+comparator.c(2): warning: In file included from...
+./comparator.h(6): warning: In file included from...
+./adc.h(23): warning: 'GPIOA_BASE' macro redefined [-Wmacro-redefined]
+   23 | #define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000)
+      |         ^
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(693): note: previous definition is here
+  693 | #define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000UL)
+      |         ^
+comparator.c(17): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+   17 |         uint16_t comp_pos = ( adc_read(P_CMP_PLUS) & (uint16_t)0x0FFF) ;
+      |                  ^
+comparator.c(2): warning: In file included from...
+./comparator.h(6): warning: In file included from...
+./adc.h(251): warning: unused function 'local_ADC_Init' [-Wunused-function]
+  251 | static void local_ADC_Init(ADC_HandleTypeDef* hadc);
+      |             ^~~~~~~~~~~~~~
+5 warnings generated.
+compiling comparator.c...
+i2c.c(1): warning: In file included from...
+./platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+   18 | #include <STM32F4xx.h>
+      |          ^~~~~~~~~~~~~
+      |          <stm32f4xx.h>
+i2c.c(3): warning: non-portable path to file '"stm32f4xx_rcc.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    3 | #include "STM32F4xx_RCC.h"
+      |          ^~~~~~~~~~~~~~~~~
+      |          "stm32f4xx_rcc.h"
+i2c.c(4): warning: non-portable path to file '"stm32f4xx_i2c.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    4 | #include "STM32F4xx_I2C.h"
+      |          ^~~~~~~~~~~~~~~~~
+      |          "stm32f4xx_i2c.h"
+i2c.c(5): warning: non-portable path to file '"stm32f4xx_gpio.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    5 | #include "STM32F4xx_GPIO.h"
+      |          ^~~~~~~~~~~~~~~~~~
+      |          "stm32f4xx_gpio.h"
+i2c.c(7): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+    7 | void i2c_init() {
+      |              ^
+      |               void
+i2c.c(2): warning: In file included from...
+./stm32f4xx_i2c.h(48): warning: padding size of 'I2C_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+   48 | typedef struct
+      |         ^
+i2c.c(7): warning: no previous prototype for function 'i2c_init' [-Wmissing-prototypes]
+    7 | void i2c_init() {
+      |      ^
+i2c.c(7): note: declare 'static' if the function is not intended to be used outside of this translation unit
+    7 | void i2c_init() {
+      | ^
+      | static 
+i2c.c(35): warning: no previous prototype for function 'i2c_write' [-Wmissing-prototypes]
+   35 | void i2c_write(uint8_t address, uint8_t *buffer, int buff_len) {
+      |      ^
+i2c.c(35): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   35 | void i2c_write(uint8_t address, uint8_t *buffer, int buff_len) {
+      | ^
+      | static 
+i2c.c(91): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   91 | // *******************************ARM University Program Copyright <A9> ARM Ltd 2016*************************************   
+      |                                                                    ^
+i2c.c(64): warning: no previous prototype for function 'i2c_read' [-Wmissing-prototypes]
+   64 | void i2c_read(uint8_t address, uint8_t *buffer, int buff_len) {
+      |      ^
+i2c.c(64): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   64 | void i2c_read(uint8_t address, uint8_t *buffer, int buff_len) {
+      | ^
+      | static 
+i2c.c(55): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   55 |                 I2C_SendData(I2C1, buffer[i]);
+      |                                    ^~~~~~
+i2c.c(80): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   80 |                 buffer[i] = I2C_ReceiveData(I2C1);
+      |                 ^~~~~~
+12 warnings generated.
+compiling i2c.c...
+gpio.c(1): warning: In file included from...
+./platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+   18 | #include <STM32F4xx.h>
+      |          ^~~~~~~~~~~~~
+      |          <stm32f4xx.h>
+gpio.c(25): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+   25 |         GPIO_TypeDef* p = GET_PORT(pin);
+      |                           ^~~~~~~~~~~~~
+./platform.h(157): note: expanded from macro 'GET_PORT'
+  157 | #define GET_PORT(pin) ((GPIO_TypeDef*)(AHB1PERIPH_BASE + 0x0400 * GET_PORT_INDEX(pin)))
+      |                                                        ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+gpio.c(28): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+   28 |         MODIFY_REG(p->ODR,1UL<<pin_index,value<<pin_index);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(223): note: expanded from macro 'MODIFY_REG'
+  223 | #define MODIFY_REG(REG, CLEARMASK, SETMASK)  WRITE_REG((REG), (((READ_REG(REG)) & (~(CLEARMASK))) | (SETMASK)))
+      |                                                                                                   ~  ^~~~~~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(219): note: expanded from macro 'WRITE_REG'
+  219 | #define WRITE_REG(REG, VAL)   ((REG) = (VAL))
+      |                                         ^~~
+gpio.c(34): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+   34 |         GPIO_TypeDef* p = GET_PORT(pin);
+      |                           ^~~~~~~~~~~~~
+./platform.h(157): note: expanded from macro 'GET_PORT'
+  157 | #define GET_PORT(pin) ((GPIO_TypeDef*)(AHB1PERIPH_BASE + 0x0400 * GET_PORT_INDEX(pin)))
+      |                                                        ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+gpio.c(37): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+   37 |         return READ_BIT(p->IDR,(1<<pin_index));
+      |         ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(215): note: expanded from macro 'READ_BIT'
+  215 | #define READ_BIT(REG, BIT)    ((REG) & (BIT))
+      |                                ~~~~~~^~~~~~~
+gpio.c(53): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+   53 |   GPIO_TypeDef* p = GET_PORT(pin_base);
+      |                     ^~~~~~~~~~~~~~~~~~
+./platform.h(157): note: expanded from macro 'GET_PORT'
+  157 | #define GET_PORT(pin) ((GPIO_TypeDef*)(AHB1PERIPH_BASE + 0x0400 * GET_PORT_INDEX(pin)))
+      |                                                        ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+gpio.c(56): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+   56 |         MODIFY_REG(p->ODR,((1UL<<count)-1)<<pin_index,value<<pin_index);
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(223): note: expanded from macro 'MODIFY_REG'
+  223 | #define MODIFY_REG(REG, CLEARMASK, SETMASK)  WRITE_REG((REG), (((READ_REG(REG)) & (~(CLEARMASK))) | (SETMASK)))
+      |                                                                                                   ~  ^~~~~~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(219): note: expanded from macro 'WRITE_REG'
+  219 | #define WRITE_REG(REG, VAL)   ((REG) = (VAL))
+      |                                         ^~~
+gpio.c(74): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+   74 |         GPIO_TypeDef* p = GET_PORT(pin_base);
+      |                           ^~~~~~~~~~~~~~~~~~
+./platform.h(157): note: expanded from macro 'GET_PORT'
+  157 | #define GET_PORT(pin) ((GPIO_TypeDef*)(AHB1PERIPH_BASE + 0x0400 * GET_PORT_INDEX(pin)))
+      |                                                        ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+gpio.c(77): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   77 |         return READ_BIT(p->IDR,(((1 << count) - 1)<<pin_index))>>pin_index;
+      |                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include\STM32F4xx.h(215): note: expanded from macro 'READ_BIT'
+  215 | #define READ_BIT(REG, BIT)    ((REG) & (BIT))
+      |                                      ~  ^~~
+gpio.c(99): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+   99 |         GPIO_TypeDef* p = GET_PORT(pin);
+      |                           ^~~~~~~~~~~~~
+./platform.h(157): note: expanded from macro 'GET_PORT'
+  157 | #define GET_PORT(pin) ((GPIO_TypeDef*)(AHB1PERIPH_BASE + 0x0400 * GET_PORT_INDEX(pin)))
+      |                                                        ~ ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+gpio.c(154): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  154 |                         EXTI->PR        &= (0<<pin_index);
+      |                                         ~~  ~^~~~~~~~~~~
+gpio.c(177): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+  177 |         IRQ_port_num = GET_PORT_INDEX(pin);
+      |                      ~ ^~~~~~~~~~~~~~~~~~~
+./platform.h(145): note: expanded from macro 'GET_PORT_INDEX'
+  145 | #define GET_PORT_INDEX(pin) ((pin) >> 16)
+      |                              ~~~~~~^~~~~
+gpio.c(274): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+  274 |                 GPIO_callback(IRQ_pin_index);
+      |                 ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+gpio.c(266): warning: no previous prototype for function 'EXTI0_IRQHandler' [-Wmissing-prototypes]
+  266 | void EXTI0_IRQHandler(void){
+      |      ^
+gpio.c(266): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  266 | void EXTI0_IRQHandler(void){
+      | ^
+      | static 
+gpio.c(286): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+  286 |                 GPIO_callback(IRQ_pin_index);
+      |                 ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+gpio.c(278): warning: no previous prototype for function 'EXTI1_IRQHandler' [-Wmissing-prototypes]
+  278 | void EXTI1_IRQHandler(void){
+      |      ^
+gpio.c(278): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  278 | void EXTI1_IRQHandler(void){
+      | ^
+      | static 
+gpio.c(299): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+  299 |                 GPIO_callback(IRQ_pin_index);
+      |                 ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+gpio.c(291): warning: no previous prototype for function 'EXTI2_IRQHandler' [-Wmissing-prototypes]
+  291 | void EXTI2_IRQHandler(void){
+      |      ^
+gpio.c(291): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  291 | void EXTI2_IRQHandler(void){
+      | ^
+      | static 
+gpio.c(312): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+  312 |                 GPIO_callback(IRQ_pin_index);
+      |                 ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+gpio.c(304): warning: no previous prototype for function 'EXTI3_IRQHandler' [-Wmissing-prototypes]
+  304 | void EXTI3_IRQHandler(void){
+      |      ^
+gpio.c(304): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  304 | void EXTI3_IRQHandler(void){
+      | ^
+      | static 
+gpio.c(325): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+  325 |                 GPIO_callback(IRQ_pin_index);
+      |                 ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+gpio.c(317): warning: no previous prototype for function 'EXTI4_IRQHandler' [-Wmissing-prototypes]
+  317 | void EXTI4_IRQHandler(void){
+      |      ^
+gpio.c(317): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  317 | void EXTI4_IRQHandler(void){
+      | ^
+      | static 
+gpio.c(337): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+  337 |                 GPIO_callback(IRQ_pin_index);
+      |                 ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+gpio.c(329): warning: no previous prototype for function 'EXTI9_5_IRQHandler' [-Wmissing-prototypes]
+  329 | void EXTI9_5_IRQHandler(void){
+      |      ^
+gpio.c(329): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  329 | void EXTI9_5_IRQHandler(void){
+      | ^
+      | static 
+gpio.c(350): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+  350 |                 GPIO_callback(IRQ_pin_index);
+      |                 ~~~~~~~~~~~~~ ^~~~~~~~~~~~~
+gpio.c(342): warning: no previous prototype for function 'EXTI15_10_IRQHandler' [-Wmissing-prototypes]
+  342 | void EXTI15_10_IRQHandler(void){
+      |      ^
+gpio.c(342): note: declare 'static' if the function is not intended to be used outside of this translation unit
+  342 | void EXTI15_10_IRQHandler(void){
+      | ^
+      | static 
+gpio.c(4): warning: no previous extern declaration for non-static variable 'IRQ_status' [-Wmissing-variable-declarations]
+    4 | uint32_t IRQ_status;
+      |          ^
+gpio.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    4 | uint32_t IRQ_status;
+      | ^
+gpio.c(5): warning: no previous extern declaration for non-static variable 'IRQ_port_num' [-Wmissing-variable-declarations]
+    5 | uint32_t IRQ_port_num;
+      |          ^
+gpio.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    5 | uint32_t IRQ_port_num;
+      | ^
+gpio.c(6): warning: no previous extern declaration for non-static variable 'IRQ_pin_index' [-Wmissing-variable-declarations]
+    6 | uint32_t IRQ_pin_index;
+      |          ^
+gpio.c(6): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    6 | uint32_t IRQ_pin_index;
+      | ^
+gpio.c(7): warning: no previous extern declaration for non-static variable 'EXTI_port_set' [-Wmissing-variable-declarations]
+    7 | uint32_t EXTI_port_set;
+      |          ^
+gpio.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    7 | uint32_t EXTI_port_set;
+      | ^
+gpio.c(8): warning: no previous extern declaration for non-static variable 'prioritygroup' [-Wmissing-variable-declarations]
+    8 | uint32_t prioritygroup;
+      |          ^
+gpio.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    8 | uint32_t prioritygroup;
+      | ^
+gpio.c(9): warning: no previous extern declaration for non-static variable 'priority' [-Wmissing-variable-declarations]
+    9 | uint32_t priority;
+      |          ^
+gpio.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    9 | uint32_t priority;
+      | ^
+gpio.c(217): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  217 |                         SYSCFG->EXTICR[1]|= EXTI_port_set;
+      |                         ^~~~~~~~~~~~~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(776): note: expanded from macro 'SYSCFG'
+  776 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+gpio.c(227): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  227 |                         SYSCFG->EXTICR[1]|= EXTI_port_set;
+      |                         ^~~~~~~~~~~~~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(776): note: expanded from macro 'SYSCFG'
+  776 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+gpio.c(236): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  236 |                         SYSCFG->EXTICR[2]|= EXTI_port_set;
+      |                         ^~~~~~~~~~~~~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(776): note: expanded from macro 'SYSCFG'
+  776 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+gpio.c(245): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  245 |                         SYSCFG->EXTICR[2]|= EXTI_port_set;
+      |                         ^~~~~~~~~~~~~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(776): note: expanded from macro 'SYSCFG'
+  776 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+gpio.c(256): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  256 |                         SYSCFG->EXTICR[3]|= EXTI_port_set;
+      |                         ^~~~~~~~~~~~~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(776): note: expanded from macro 'SYSCFG'
+  776 | #define SYSCFG              ((SYSCFG_TypeDef *) SYSCFG_BASE)
+      |                             ^
+37 warnings generated.
+compiling gpio.c...
+leds.c(1): warning: In file included from...
+./platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+   18 | #include <STM32F4xx.h>
+      |          ^~~~~~~~~~~~~
+      |          <stm32f4xx.h>
+leds.c(3): warning: In file included from...
+./leds.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   22 | // *******************************ARM University Program Copyright <A9> ARM Ltd 2016*************************************   
+      |                                                                    ^
+leds.c(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   22 | // *******************************ARM University Program Copyright <A9> ARM Ltd 2016*************************************   
+      |                                                                    ^
+3 warnings generated.
+compiling leds.c...
+queue.c(16): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   16 |                 queue->data[queue->tail++] = item;
+      |                 ^~~~~~~~~~~
+queue.c(26): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   26 |                 *item = queue->data[queue->head++];
+      |                         ^~~~~~~~~~~
+2 warnings generated.
+compiling queue.c...
+stm32f4xx_adc.c(98): warning: In file included from...
+./stm32f4xx_adc.h(58): warning: padding struct 'ADC_InitTypeDef' with 2 bytes to align 'ADC_ExternalTrigConvEdge' [-Wpadded]
+   58 |   uint32_t ADC_ExternalTrigConvEdge;      /*!< Select the external trigger edge and
+      |            ^
+./stm32f4xx_adc.h(47): warning: padding size of 'ADC_InitTypeDef' with 3 bytes to alignment boundary [-Wpadded]
+   47 | typedef struct
+      |         ^
+2 warnings generated.
+compiling stm32f4xx_adc.c...
+stm32f4xx_gpio.c(525): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  525 |   GPIOx->AFR[GPIO_PinSource >> 0x03] &= ~((uint32_t)0xF << ((uint32_t)((uint32_t)GPIO_PinSource & (uint32_t)0x07) * 4)) ;
+      |   ^~~~~~~~~~
+stm32f4xx_gpio.c(526): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  526 |   temp_2 = GPIOx->AFR[GPIO_PinSource >> 0x03] | temp;
+      |            ^~~~~~~~~~
+stm32f4xx_gpio.c(527): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  527 |   GPIOx->AFR[GPIO_PinSource >> 0x03] = temp_2;
+      |   ^~~~~~~~~~
+3 warnings generated.
+compiling stm32f4xx_gpio.c...
+test.c(1): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+1 warning generated.
+compiling test.c...
+stm32f4xx_i2c.c(192): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  192 |   tmpreg = I2Cx->CR2;
+      |          ~ ~~~~~~^~~
+stm32f4xx_i2c.c(264): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  264 |   tmpreg = I2Cx->CR1;
+      |          ~ ~~~~~~^~~
+stm32f4xx_i2c.c(87): warning: In file included from...
+./stm32f4xx_i2c.h(48): warning: padding size of 'I2C_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+   48 | typedef struct
+      |         ^
+stm32f4xx_i2c.c(442): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  442 |   tmpreg = I2Cx->OAR2;
+      |          ~ ~~~~~~^~~~
+stm32f4xx_i2c.c(815): warning: implicit conversion loses integer precision: 'uint32_t' (aka 'unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+  815 |   return ((I2Cx->SR2) >> 8);
+      |   ~~~~~~  ~~~~~~~~~~~~^~~~
+5 warnings generated.
+compiling stm32f4xx_i2c.c...
+stm32f4xx_usart.c(86): warning: In file included from...
+./stm32f4xx_usart.h(48): warning: padding size of 'USART_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+   48 | typedef struct
+      |         ^
+stm32f4xx_usart.c(434): warning: unused parameter 'USARTx' [-Wunused-parameter]
+  434 | void USART_SetPrescaler(USART_TypeDef* USARTx, uint8_t USART_Prescaler)
+      |                                        ^
+stm32f4xx_usart.c(434): warning: unused parameter 'USART_Prescaler' [-Wunused-parameter]
+  434 | void USART_SetPrescaler(USART_TypeDef* USARTx, uint8_t USART_Prescaler)
+      |                                                        ^
+stm32f4xx_usart.c(1443): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+ 1443 |   itmask = ((uint16_t)0x01 << (uint16_t)bitpos);
+      |          ~  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+4 warnings generated.
+compiling stm32f4xx_usart.c...
+stm32f4xx_rcc.c(677): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  677 |    @note When VOS bit (in PWR_CR register) is reset to '0<92>, the maximum value of HCLK is 144 MHz.
+      |                                                          ^
+stm32f4xx_rcc.c(917): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  917 |   presc = APBAHBPrescTable[tmp];
+      |           ^~~~~~~~~~~~~~~~
+stm32f4xx_rcc.c(924): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  924 |   presc = APBAHBPrescTable[tmp];
+      |           ^~~~~~~~~~~~~~~~
+stm32f4xx_rcc.c(931): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  931 |   presc = APBAHBPrescTable[tmp];
+      |           ^~~~~~~~~~~~~~~~
+4 warnings generated.
+compiling stm32f4xx_rcc.c...
+timer.c(1): warning: In file included from...
+./platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+   18 | #include <STM32F4xx.h>
+      |          ^~~~~~~~~~~~~
+      |          <stm32f4xx.h>
+timer.c(2): warning: In file included from...
+./timer.h(31): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   31 | // *******************************ARM University Program Copyright <A9> ARM Ltd 2016*************************************   
+      |                                                                    ^
+timer.c(15): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+   15 |                 uint32_t tick_us = (SystemCoreClock)/1e6;
+      |                          ~~~~~~~   ~~~~~~~~~~~~~~~~~^~~~
+timer.c(45): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+   45 | void SysTick_Handler(void)
+      |      ^
+timer.c(45): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   45 | void SysTick_Handler(void)
+      | ^
+      | static 
+timer.c(4): warning: no previous extern declaration for non-static variable 'timer_period' [-Wmissing-variable-declarations]
+    4 | uint32_t timer_period;
+      |          ^
+timer.c(4): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    4 | uint32_t timer_period;
+      | ^
+5 warnings generated.
+compiling timer.c...
+touch_sensor.c(1): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+1 warning generated.
+compiling touch_sensor.c...
+uart.c(1): warning: In file included from...
+./platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+   18 | #include <STM32F4xx.h>
+      |          ^~~~~~~~~~~~~
+      |          <stm32f4xx.h>
+uart.c(3): warning: non-portable path to file '"stm32f4xx_rcc.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    3 | #include "STM32F4xx_RCC.h"
+      |          ^~~~~~~~~~~~~~~~~
+      |          "stm32f4xx_rcc.h"
+uart.c(4): warning: non-portable path to file '"stm32f4xx_usart.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    4 | #include "STM32F4xx_USART.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+      |          "stm32f4xx_usart.h"
+uart.c(5): warning: non-portable path to file '"stm32f4xx_gpio.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+    5 | #include "STM32F4xx_GPIO.h"
+      |          ^~~~~~~~~~~~~~~~~~
+      |          "stm32f4xx_gpio.h"
+uart.c(4): warning: In file included from...
+./STM32F4xx_USART.h(48): warning: padding size of 'USART_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+   48 | typedef struct
+      |         ^
+uart.c(89): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+   89 |         return Data;
+      |         ~~~~~~ ^~~~
+uart.c(92): warning: no previous prototype for function 'USART2_IRQHandler' [-Wmissing-prototypes]
+   92 | void USART2_IRQHandler(void){
+      |      ^
+uart.c(92): note: declare 'static' if the function is not intended to be used outside of this translation unit
+   92 | void USART2_IRQHandler(void){
+      | ^
+      | static 
+uart.c(54): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+   54 |     uart_tx(*string++);
+      |              ^~~~~~
+8 warnings generated.
+compiling uart.c...
+main.c(3): warning: In file included from...
+./platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+   18 | #include <STM32F4xx.h>
+      |          ^~~~~~~~~~~~~
+      |          <stm32f4xx.h>
+main.c(4): warning: In file included from...
+./timer.h(31): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   31 | // *******************************ARM University Program Copyright <A9> ARM Ltd 2016*************************************   
+      |                                                                    ^
+main.c(6): warning: In file included from...
+./touch_sensor.h(10): warning: no newline at end of file [-Wnewline-eof]
+   10 | #endif // TOUCH_SENSOR_H
+      |                         ^
+main.c(20): warning: no previous extern declaration for non-static variable 'touch_press_count' [-Wmissing-variable-declarations]
+   20 | volatile int touch_press_count = 0;
+      |              ^
+main.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   20 | volatile int touch_press_count = 0;
+      |          ^
+main.c(21): warning: no previous extern declaration for non-static variable 'temp_print_period' [-Wmissing-variable-declarations]
+   21 | volatile int temp_print_period = DEFAULT_PRINT_PERIOD;  // Default period for temperature printing in seconds
+      |              ^
+main.c(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   21 | volatile int temp_print_period = DEFAULT_PRINT_PERIOD;  // Default period for temperature printing in seconds
+      |          ^
+main.c(22): warning: no previous extern declaration for non-static variable 'temperature' [-Wmissing-variable-declarations]
+   22 | volatile uint8_t temperature = 0;
+      |                  ^
+main.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   22 | volatile uint8_t temperature = 0;
+      |          ^
+main.c(23): warning: no previous extern declaration for non-static variable 'humidity' [-Wmissing-variable-declarations]
+   23 | volatile uint8_t humidity = 0;
+      |                  ^
+main.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   23 | volatile uint8_t humidity = 0;
+      |          ^
+main.c(24): warning: no previous extern declaration for non-static variable 'user_id' [-Wmissing-variable-declarations]
+   24 | volatile int user_id = 0;
+      |              ^
+main.c(24): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   24 | volatile int user_id = 0;
+      |          ^
+main.c(25): warning: no previous extern declaration for non-static variable 'timer_counter' [-Wmissing-variable-declarations]
+   25 | volatile int timer_counter = 0;
+      |              ^
+main.c(25): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   25 | volatile int timer_counter = 0;
+      |          ^
+main.c(26): warning: no previous extern declaration for non-static variable 'read_sensor_flag' [-Wmissing-variable-declarations]
+   26 | volatile int read_sensor_flag = 0;
+      |              ^
+main.c(26): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   26 | volatile int read_sensor_flag = 0;
+      |          ^
+main.c(27): warning: no previous extern declaration for non-static variable 'touch_event_flag' [-Wmissing-variable-declarations]
+   27 | volatile int touch_event_flag = 0;
+      |              ^
+main.c(27): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   27 | volatile int touch_event_flag = 0;
+      |          ^
+main.c(28): warning: no previous extern declaration for non-static variable 'ext_led_pin' [-Wmissing-variable-declarations]
+   28 | Pin ext_led_pin = PB_5; // Assuming the LED is connected to port B, pin 5
+      |     ^
+main.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   28 | Pin ext_led_pin = PB_5; // Assuming the LED is connected to port B, pin 5
+      | ^
+main.c(29): warning: no previous extern declaration for non-static variable 'touch_sensor_pin' [-Wmissing-variable-declarations]
+   29 | Pin touch_sensor_pin = PA_1;
+      |     ^
+main.c(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   29 | Pin touch_sensor_pin = PA_1;
+      | ^
+main.c(88): warning: incompatible function pointer types passing 'void (void)' to parameter of type 'void (*)(int)' [-Wincompatible-function-pointer-types-strict]
+   88 |     gpio_set_callback(PA_1, touch_callback);
+      |                             ^~~~~~~~~~~~~~
+./gpio.h(96): note: passing argument to parameter 'callback' here
+   96 | void gpio_set_callback(Pin pin, void (*callback)(int status));
+      |                                        ^
+main.c(102): warning: cast from 'volatile unsigned char *' to 'unsigned char *' drops volatile qualifier [-Wcast-qual]
+  102 |             if (DHT11_ReadTemperature((uint8_t*)&temperature, (uint8_t*)&humidity)) {
+      |                                                 ^
+main.c(102): warning: cast from 'volatile unsigned char *' to 'unsigned char *' drops volatile qualifier [-Wcast-qual]
+  102 |             if (DHT11_ReadTemperature((uint8_t*)&temperature, (uint8_t*)&humidity)) {
+      |                                                                         ^
+main.c(101): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  101 |             char buffer[50];
+      |                  ^
+main.c(121): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  121 |             char buffer[50];
+      |                  ^
+main.c(18): warning: no previous extern declaration for non-static variable 'rx_queue' [-Wmissing-variable-declarations]
+   18 | Queue rx_queue;
+      |       ^
+main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+   18 | Queue rx_queue;
+      | ^
+main.c(68): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   68 |             buff[buff_index++] = (char)rx_char;
+      |             ^~~~
+main.c(74): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   74 |     buff[buff_index - 1] = '\0';
+      |     ^~~~
+21 warnings generated.
+compiling main.c...
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Source/retarget_io.c(409): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  409 |   \return    The return value is <96>1 if an error occurs.
+      |                                  ^
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Source/retarget_io.c(516): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  516 |         ch = *buf++;
+      |               ^~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Source/retarget_io.c(527): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  527 |         ch = *buf++;
+      |               ^~~
+C:/Users/dimit/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.7.2/Source/retarget_io.c(593): warning: unsafe pointer arithmetic [-Wunsafe-buffer-usage]
+  593 |       *buf++ = (uint8_t)ch;
+      |        ^~~
+4 warnings generated.
+compiling retarget_io.c...
+RTE/Device/STM32F411RETx/system_stm32f4xx.c(263): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  263 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+1 warning generated.
+compiling system_stm32f4xx.c...
+linking...
+Program Size: Code=22964 RO-data=1208 RW-data=16 ZI-data=1720  
+".\Objects\Project_3.axf" - 0 Error(s), 150 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM::CMSIS@6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.ARM_Compiler.1.7.2.pack
+                Keil::ARM_Compiler@1.7.2
+                Keil ARM Compiler extensions for ARM Compiler 5 and ARM Compiler 6
+   * Component: STDERR Variant: ITM Version: 1.2.0
+   * Component: STDIN Variant: ITM Version: 1.2.0
+   * Component: STDOUT Variant: ITM Version: 1.2.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil::STM32F4xx_DFP@2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/dimit/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  C:/Users/dimit/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.0.0
+
+   * Component: Keil::Compiler&ARM Compiler:I/O:STDERR&ITM@1.2.0
+      Source file:   Source/retarget_io.c
+
+   * Component: Keil::Compiler&ARM Compiler:I/O:STDIN&ITM@1.2.0
+      Source file:   Source/retarget_io.c
+
+   * Component: Keil::Compiler&ARM Compiler:I/O:STDOUT&ITM@1.2.0
+      Source file:   Source/retarget_io.c
+
+   * Component: Keil::Device:Startup@2.6.3
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f411xe.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F411xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
